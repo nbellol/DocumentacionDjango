@@ -60,9 +60,9 @@ def obtainlinks ():
     driver.get(url + "/home")
     time.sleep(5)  # Let the user actually see something!
     search_box = driver.find_element_by_name('usuario') # se ingresa el usuario
-    search_box.send_keys('n.bello')
+    search_box.send_keys('<ingrese Usurio>')
     search_box = driver.find_element_by_name('password') # se ingrea la contrasenha
-    search_box.send_keys('nbellol1203')
+    search_box.send_keys('<Ingrese Contraseña>')
     search_box.submit() #se ingresa a senecode
     time.sleep(5)
 
