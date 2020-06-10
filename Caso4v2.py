@@ -2,6 +2,15 @@ from os import listdir
 from os.path import isfile, join, isdir
 
 """
+Se agrega estas lineas en el archivo setting.py de forma que se pueda activar y desactivar
+la visualizacion
+
+HOVER_TAG = True
+HOVER_TEMPLATE = 'calificador.templatetags.custom_tag'
+if not HOVER_TAG:
+    HOVER_TEMPLATE= 'calificador.templatetags.custom_tag2'
+print(HOVER_TEMPLATE)
+
 Se agrega esta informacion en la Seccion de Templates del archivo settings.py
 'libraries':{
                 'custom_tag': 'calificador.templatetags.custom_tag',
