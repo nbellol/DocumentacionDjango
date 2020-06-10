@@ -1,0 +1,1112 @@
+calificador/dashboard/models
+├── comentarios
+│   ├── pregunta-inline
+│   │   ├── 26_ for comentario in pregunta.consultar_comentarios 
+│   │   └── 55_'dashboard/componentes/nuevo_comentario.html' with pregunta=pregunta formulario=pregunta.get_respuesta_form tipo="respuesta"
+│   └── problema-preguntas
+│       ├── 11_'dashboard/componentes/nuevo_comentario.html' with pregunta=pregunta formulario=form_pregunta tipo="pregunta" 
+│       └── 15_ for pregunta in problema.consultar_preguntas 
+├── envios
+│   ├── 1_ for envio in envios 
+│   ├── 2_'dashboard/bloques/envio-inline.html' with envio=envio problema=problema mostrar_problema=mostrar_problema 
+│   ├── envio-card
+│   │   ├── 10_ envio.timestamp|naturaltime 
+│   │   ├── 14_ envio.avance == 100
+│   │   ├── 15_ envio.problema.dificultad 
+│   │   ├── 15_envio.resultado_estudiante.puntos
+│   │   ├── 17_'dashboard/componentes/avance_envio.html' with envio=envio 
+│   │   ├── 22_ 'problema' envio.problema.slug 
+│   │   ├── 28_ 'envio' envio.slug 
+│   │   ├── 34_ 'nuevo_envio' envio.problema.slug 
+│   │   └── 7_ envio.problema.titulo 
+│   ├── envio-card-resumida
+│   │   ├── 11_ 'envio' envio.slug 
+│   │   ├── 20_ envio.timestamp|naturaltime 
+│   │   ├── 25_ envio.avance == 100
+│   │   ├── 26_ envio.problema.dificultad 
+│   │   ├── 26_envio.resultado_estudiante.puntos
+│   │   ├── 30_'dashboard/componentes/avance_envio.html' with envio=envio 
+│   │   └── 7_ envio.numero 
+│   ├── envio-header
+│   │   ├── 10_ envio.problema.titulo 
+│   │   ├── 11_ envio.numero 
+│   │   ├── 22_ envio.problema.dificultad 
+│   │   ├── 22_ envio.resultado_estudiante.puntos 
+│   │   ├── 30_ envio.problema.dificultad 
+│   │   ├── 33_ envio.problema.es_reto 
+│   │   ├── 39_ envio.problema.nombre_nivel_reto 
+│   │   ├── 46_ envio.fecha_formateada 
+│   │   ├── 46_ envio.timestamp|naturaltime 
+│   │   └── 5_ envio.problema.es_reto 
+│   ├── envio-inline
+│   │   ├── 12_ 'envio' envio.slug 
+│   │   ├── 12_ envio.numero 
+│   │   ├── 13_'dashboard/componentes/avance_envio.html' with envio=envio 
+│   │   ├── 15_ envio.timestamp|naturaltime 
+│   │   ├── 17_'dashboard/componentes/nuevo_envio_boton.html' with problema=envio.problema 
+│   │   ├── 9_ 'problema' envio.problema.slug 
+│   │   └── 9_ envio.problema.titulo 
+│   └── problema-tarea
+│       ├── 5_'dashboard/componentes/tags.html' with tags=problema.tags.all 
+│       └── 9_'dashboard/componentes/avance_envio.html' with envio=resultado_problema.ultimo_envio 
+├── problemas
+│   ├── especificacion_funcion
+│   │   ├── 16_ for parametro in problema.consultar_argumentos 
+│   │   ├── 30_ problema.retorno_tipo 
+│   │   ├── 31_ problema.retorno_descripcion 
+│   │   └── 5_ problema.funcion 
+│   ├── instrucciones
+│   │   └── 9_ include 'dashboard/bloques/especificacion_funcion.html' with problema=problema
+│   ├── pregunta-analisis-estudiante
+│   │   ├── 2_ 'problema' pregunta.problema.slug 
+│   │   ├── 2_ pregunta.problema.titulo 
+│   │   └── 3_ 'problema' pregunta.problema.slug 
+│   ├── problema-analisis-estudiante
+│   │   ├── 12_ 'analisis estudiante problema' resultado.estudiante.id resultado.problema.slug 
+│   │   ├── 2_ problema.dificultad 
+│   │   ├── 5_ 'problema' problema.slug 
+│   │   ├── 5_ problema.titulo 
+│   │   ├── 6_ problema.es_reto 
+│   │   └── 7_ problema.nombre_nivel_reto 
+│   ├── problema-analisis-seccion
+│   │   ├── 11_ problema.dificultad 
+│   │   ├── 13_ 'analisis seccion problema' seccion.id problema.slug 
+│   │   ├── 4_ 'problema' problema.slug 
+│   │   ├── 7_ problema.es_reto 
+│   │   └── 9_ problema.nombre_nivel_reto 
+│   ├── problema-busqueda
+│   │   ├── 12_ problema.publico 
+│   │   ├── 21_ problema.dificultad 
+│   │   ├── 25_ problema.dificultad 
+│   │   ├── 27_ problema.es_reto 
+│   │   ├── 29_ problema.nombre_nivel_reto 
+│   │   ├── 35_ 'administrar' problema.slug 
+│   │   ├── 41_'dashboard/componentes/tags.html' with tags=problema.tags.all 
+│   │   ├── 7_ 'problema' problema.slug 
+│   │   └── 7_ problema.titulo 
+│   ├── problema-card
+│   │   ├── 11_ 'problema' problema.slug 
+│   │   ├── 11_ problema.titulo 
+│   │   ├── 14_ problema.publico 
+│   │   ├── 24_ problema.es_reto 
+│   │   ├── 26_ problema.nombre_nivel_reto 
+│   │   ├── 28_ problema.dificultad 
+│   │   ├── 30_'dashboard/componentes/tags.html' with tags=problema.tags.all 
+│   │   └── 7_ problema.dificultad 
+│   ├── problema-descripcion
+│   │   └── 3_ problema.descripcion 
+│   ├── problema-header
+│   │   ├── 15_ problema.dificultad 
+│   │   ├── 15_ resultado_problema.puntos 
+│   │   ├── 24_ problema.dificultad 
+│   │   ├── 33_ problema.nombre_nivel_reto 
+│   │   ├── 44_ problema.curso 
+│   │   ├── 46_ 'estadisticas_pr' problema.slug 
+│   │   └── 4_ problema.titulo 
+│   ├── problema-header-simple
+│   │   ├── 10_ problema.dificultad 
+│   │   ├── 15_'dashboard/componentes/tags.html' with tags=problema.tags.all 
+│   │   ├── 18_ problema.curso 
+│   │   └── 2_ problema.titulo 
+│   ├── problema-inline
+│   │   └── 33_ problema.descripcion|linebreaks|truncatewords:50 
+│   ├── problema-retos
+│   └── tag-analisis-seccion
+│       └── 5_ problemas 
+└── tareas
+    ├── tarea-header
+    │   ├── 5_ tarea.descripcion 
+    │   ├── 7_ tarea.fecha_formateada 
+    │   └── 7_ tarea.fecha_limite|naturaltime 
+    ├── tarea-inline
+    │   ├── 15_ tarea.fecha_formateada 
+    │   ├── 16_ tarea.fecha_limite|naturaltime 
+    │   ├── 4_ 'tarea' tarea.id 
+    │   ├── 6_ tarea.descripcion 
+    │   └── 7_ tarea.vencida 
+    ├── tarea-seccion-inline
+    │   ├── 10_ tarea.numero 
+    │   ├── 14_ tarea.fecha_formateada 
+    │   ├── 15_  tarea.vencida 
+    │   ├── 17_ tarea.fecha_limite|naturaltime 
+    │   └── 21_ tarea.fecha_limite|naturaltime 
+    └── tarea-seccion-inline-corta
+        ├── 10_ tarea.descripcion 
+        ├── 13_  tarea.vencida 
+        ├── 19_ tarea.fecha_formateada 
+        ├── 20_ tarea.fecha_limite|naturaltime 
+        ├── 4_ tarea.seccion.numero 
+        └── 7_ 'analisis_tarea' tarea.id 
+calificador/dashboard/models
+├── comentarios
+│   ├── pregunta-inline
+│   │   ├── 34_ for comentario in pregunta.consultar_comentarios 
+│   │   └── 63_'dashboard/componentes/nuevo_comentario.html' with pregunta=pregunta formulario=pregunta.get_respuesta_form tipo="respuesta"
+│   └── problema-preguntas
+│       ├── 19_'dashboard/componentes/nuevo_comentario.html' with pregunta=pregunta formulario=form_pregunta tipo="pregunta" 
+│       └── 23_ for pregunta in problema.consultar_preguntas 
+├── envios
+│   ├── 10_'dashboard/bloques/envio-inline.html' with envio=envio problema=problema mostrar_problema=mostrar_problema 
+│   ├── 9_ for envio in envios 
+│   ├── envio-card
+│   │   ├── 15_ envio.problema.titulo 
+│   │   ├── 18_ envio.timestamp|naturaltime 
+│   │   ├── 22_ envio.avance == 100
+│   │   ├── 23_ envio.problema.dificultad 
+│   │   ├── 23_envio.resultado_estudiante.puntos
+│   │   ├── 25_'dashboard/componentes/avance_envio.html' with envio=envio 
+│   │   ├── 30_ 'problema' envio.problema.slug 
+│   │   ├── 36_ 'envio' envio.slug 
+│   │   └── 42_ 'nuevo_envio' envio.problema.slug 
+│   ├── envio-card-resumida
+│   │   ├── 15_ envio.numero 
+│   │   ├── 19_ 'envio' envio.slug 
+│   │   ├── 28_ envio.timestamp|naturaltime 
+│   │   ├── 33_ envio.avance == 100
+│   │   ├── 34_ envio.problema.dificultad 
+│   │   ├── 34_envio.resultado_estudiante.puntos
+│   │   └── 38_'dashboard/componentes/avance_envio.html' with envio=envio 
+│   ├── envio-header
+│   │   ├── 13_ envio.problema.es_reto 
+│   │   ├── 18_ envio.problema.titulo 
+│   │   ├── 19_ envio.numero 
+│   │   ├── 30_ envio.problema.dificultad 
+│   │   ├── 30_ envio.resultado_estudiante.puntos 
+│   │   ├── 38_ envio.problema.dificultad 
+│   │   ├── 41_ envio.problema.es_reto 
+│   │   ├── 47_ envio.problema.nombre_nivel_reto 
+│   │   ├── 54_ envio.fecha_formateada 
+│   │   └── 54_ envio.timestamp|naturaltime 
+│   ├── envio-inline
+│   │   ├── 17_ 'problema' envio.problema.slug 
+│   │   ├── 17_ envio.problema.titulo 
+│   │   ├── 20_ 'envio' envio.slug 
+│   │   ├── 20_ envio.numero 
+│   │   ├── 21_'dashboard/componentes/avance_envio.html' with envio=envio 
+│   │   ├── 23_ envio.timestamp|naturaltime 
+│   │   └── 25_'dashboard/componentes/nuevo_envio_boton.html' with problema=envio.problema 
+│   └── problema-tarea
+│       ├── 13_'dashboard/componentes/tags.html' with tags=problema.tags.all 
+│       └── 17_'dashboard/componentes/avance_envio.html' with envio=resultado_problema.ultimo_envio 
+├── problemas
+│   ├── especificacion_funcion
+│   │   ├── 13_ problema.funcion 
+│   │   ├── 24_ for parametro in problema.consultar_argumentos 
+│   │   ├── 38_ problema.retorno_tipo 
+│   │   └── 39_ problema.retorno_descripcion 
+│   ├── instrucciones
+│   │   └── 17_ include 'dashboard/bloques/especificacion_funcion.html' with problema=problema
+│   ├── pregunta-analisis-estudiante
+│   │   ├── 10_ 'problema' pregunta.problema.slug 
+│   │   ├── 10_ pregunta.problema.titulo 
+│   │   └── 11_ 'problema' pregunta.problema.slug 
+│   ├── problema-analisis-estudiante
+│   │   ├── 10_ problema.dificultad 
+│   │   ├── 13_ 'problema' problema.slug 
+│   │   ├── 13_ problema.titulo 
+│   │   ├── 14_ problema.es_reto 
+│   │   ├── 15_ problema.nombre_nivel_reto 
+│   │   └── 20_ 'analisis estudiante problema' resultado.estudiante.id resultado.problema.slug 
+│   ├── problema-analisis-seccion
+│   │   ├── 12_ 'problema' problema.slug 
+│   │   ├── 15_ problema.es_reto 
+│   │   ├── 17_ problema.nombre_nivel_reto 
+│   │   ├── 19_ problema.dificultad 
+│   │   └── 21_ 'analisis seccion problema' seccion.id problema.slug 
+│   ├── problema-busqueda
+│   │   ├── 15_ 'problema' problema.slug 
+│   │   ├── 15_ problema.titulo 
+│   │   ├── 20_ problema.publico 
+│   │   ├── 29_ problema.dificultad 
+│   │   ├── 33_ problema.dificultad 
+│   │   ├── 35_ problema.es_reto 
+│   │   ├── 37_ problema.nombre_nivel_reto 
+│   │   ├── 43_ 'administrar' problema.slug 
+│   │   └── 49_'dashboard/componentes/tags.html' with tags=problema.tags.all 
+│   ├── problema-card
+│   │   ├── 15_ problema.dificultad 
+│   │   ├── 19_ 'problema' problema.slug 
+│   │   ├── 19_ problema.titulo 
+│   │   ├── 22_ problema.publico 
+│   │   ├── 32_ problema.es_reto 
+│   │   ├── 34_ problema.nombre_nivel_reto 
+│   │   ├── 36_ problema.dificultad 
+│   │   └── 38_'dashboard/componentes/tags.html' with tags=problema.tags.all 
+│   ├── problema-descripcion
+│   │   └── 11_ problema.descripcion 
+│   ├── problema-header
+│   │   ├── 12_ problema.titulo 
+│   │   ├── 23_ problema.dificultad 
+│   │   ├── 23_ resultado_problema.puntos 
+│   │   ├── 32_ problema.dificultad 
+│   │   ├── 41_ problema.nombre_nivel_reto 
+│   │   ├── 52_ problema.curso 
+│   │   └── 54_ 'estadisticas_pr' problema.slug 
+│   ├── problema-header-simple
+│   │   ├── 10_ problema.titulo 
+│   │   ├── 18_ problema.dificultad 
+│   │   ├── 23_'dashboard/componentes/tags.html' with tags=problema.tags.all 
+│   │   └── 26_ problema.curso 
+│   ├── problema-inline
+│   │   └── 41_ problema.descripcion|linebreaks|truncatewords:50 
+│   ├── problema-retos
+│   └── tag-analisis-seccion
+│       └── 13_ problemas 
+└── tareas
+    ├── tarea-header
+    │   ├── 13_ tarea.descripcion 
+    │   ├── 15_ tarea.fecha_formateada 
+    │   └── 15_ tarea.fecha_limite|naturaltime 
+    ├── tarea-inline
+    │   ├── 12_ 'tarea' tarea.id 
+    │   ├── 14_ tarea.descripcion 
+    │   ├── 15_ tarea.vencida 
+    │   ├── 23_ tarea.fecha_formateada 
+    │   └── 24_ tarea.fecha_limite|naturaltime 
+    ├── tarea-seccion-inline
+    │   ├── 18_ tarea.numero 
+    │   ├── 22_ tarea.fecha_formateada 
+    │   ├── 23_  tarea.vencida 
+    │   ├── 25_ tarea.fecha_limite|naturaltime 
+    │   └── 29_ tarea.fecha_limite|naturaltime 
+    └── tarea-seccion-inline-corta
+        ├── 12_ tarea.seccion.numero 
+        ├── 15_ 'analisis_tarea' tarea.id 
+        ├── 18_ tarea.descripcion 
+        ├── 21_  tarea.vencida 
+        ├── 27_ tarea.fecha_formateada 
+        └── 28_ tarea.fecha_limite|naturaltime 
+calificador/dashboard/models
+├── comentarios
+│   ├── pregunta-inline
+│   │   ├── 34_ for comentario in pregunta.consultar_comentarios 
+│   │   └── 63_'dashboard/componentes/nuevo_comentario.html' with pregunta=pregunta formulario=pregunta.get_respuesta_form tipo="respuesta"
+│   └── problema-preguntas
+│       ├── 19_'dashboard/componentes/nuevo_comentario.html' with pregunta=pregunta formulario=form_pregunta tipo="pregunta" 
+│       └── 23_ for pregunta in problema.consultar_preguntas 
+├── envios
+│   ├── 10_'dashboard/bloques/envio-inline.html' with envio=envio problema=problema mostrar_problema=mostrar_problema 
+│   ├── 9_ for envio in envios 
+│   ├── envio-card
+│   │   ├── 15_ envio.problema.titulo 
+│   │   ├── 18_ envio.timestamp|naturaltime 
+│   │   ├── 22_ envio.avance == 100
+│   │   ├── 23_ envio.problema.dificultad 
+│   │   ├── 23_envio.resultado_estudiante.puntos
+│   │   ├── 25_'dashboard/componentes/avance_envio.html' with envio=envio 
+│   │   ├── 30_ 'problema' envio.problema.slug 
+│   │   ├── 36_ 'envio' envio.slug 
+│   │   └── 42_ 'nuevo_envio' envio.problema.slug 
+│   ├── envio-card-resumida
+│   │   ├── 15_ envio.numero 
+│   │   ├── 19_ 'envio' envio.slug 
+│   │   ├── 28_ envio.timestamp|naturaltime 
+│   │   ├── 33_ envio.avance == 100
+│   │   ├── 34_ envio.problema.dificultad 
+│   │   ├── 34_envio.resultado_estudiante.puntos
+│   │   └── 38_'dashboard/componentes/avance_envio.html' with envio=envio 
+│   ├── envio-header
+│   │   ├── 13_ envio.problema.es_reto 
+│   │   ├── 18_ envio.problema.titulo 
+│   │   ├── 19_ envio.numero 
+│   │   ├── 30_ envio.problema.dificultad 
+│   │   ├── 30_ envio.resultado_estudiante.puntos 
+│   │   ├── 38_ envio.problema.dificultad 
+│   │   ├── 41_ envio.problema.es_reto 
+│   │   ├── 47_ envio.problema.nombre_nivel_reto 
+│   │   ├── 54_ envio.fecha_formateada 
+│   │   └── 54_ envio.timestamp|naturaltime 
+│   ├── envio-inline
+│   │   ├── 17_ 'problema' envio.problema.slug 
+│   │   ├── 17_ envio.problema.titulo 
+│   │   ├── 20_ 'envio' envio.slug 
+│   │   ├── 20_ envio.numero 
+│   │   ├── 21_'dashboard/componentes/avance_envio.html' with envio=envio 
+│   │   ├── 23_ envio.timestamp|naturaltime 
+│   │   └── 25_'dashboard/componentes/nuevo_envio_boton.html' with problema=envio.problema 
+│   └── problema-tarea
+│       ├── 13_'dashboard/componentes/tags.html' with tags=problema.tags.all 
+│       └── 17_'dashboard/componentes/avance_envio.html' with envio=resultado_problema.ultimo_envio 
+├── problemas
+│   ├── especificacion_funcion
+│   │   ├── 13_ problema.funcion 
+│   │   ├── 24_ for parametro in problema.consultar_argumentos 
+│   │   ├── 38_ problema.retorno_tipo 
+│   │   └── 39_ problema.retorno_descripcion 
+│   ├── instrucciones
+│   │   └── 17_ include 'dashboard/bloques/especificacion_funcion.html' with problema=problema
+│   ├── pregunta-analisis-estudiante
+│   │   ├── 10_ 'problema' pregunta.problema.slug 
+│   │   ├── 10_ pregunta.problema.titulo 
+│   │   └── 11_ 'problema' pregunta.problema.slug 
+│   ├── problema-analisis-estudiante
+│   │   ├── 10_ problema.dificultad 
+│   │   ├── 13_ 'problema' problema.slug 
+│   │   ├── 13_ problema.titulo 
+│   │   ├── 14_ problema.es_reto 
+│   │   ├── 15_ problema.nombre_nivel_reto 
+│   │   └── 20_ 'analisis estudiante problema' resultado.estudiante.id resultado.problema.slug 
+│   ├── problema-analisis-seccion
+│   │   ├── 12_ 'problema' problema.slug 
+│   │   ├── 15_ problema.es_reto 
+│   │   ├── 17_ problema.nombre_nivel_reto 
+│   │   ├── 19_ problema.dificultad 
+│   │   └── 21_ 'analisis seccion problema' seccion.id problema.slug 
+│   ├── problema-busqueda
+│   │   ├── 15_ 'problema' problema.slug 
+│   │   ├── 15_ problema.titulo 
+│   │   ├── 20_ problema.publico 
+│   │   ├── 29_ problema.dificultad 
+│   │   ├── 33_ problema.dificultad 
+│   │   ├── 35_ problema.es_reto 
+│   │   ├── 37_ problema.nombre_nivel_reto 
+│   │   ├── 43_ 'administrar' problema.slug 
+│   │   └── 49_'dashboard/componentes/tags.html' with tags=problema.tags.all 
+│   ├── problema-card
+│   │   ├── 15_ problema.dificultad 
+│   │   ├── 19_ 'problema' problema.slug 
+│   │   ├── 19_ problema.titulo 
+│   │   ├── 22_ problema.publico 
+│   │   ├── 32_ problema.es_reto 
+│   │   ├── 34_ problema.nombre_nivel_reto 
+│   │   ├── 36_ problema.dificultad 
+│   │   └── 38_'dashboard/componentes/tags.html' with tags=problema.tags.all 
+│   ├── problema-descripcion
+│   │   └── 11_ problema.descripcion 
+│   ├── problema-header
+│   │   ├── 12_ problema.titulo 
+│   │   ├── 23_ problema.dificultad 
+│   │   ├── 23_ resultado_problema.puntos 
+│   │   ├── 32_ problema.dificultad 
+│   │   ├── 41_ problema.nombre_nivel_reto 
+│   │   ├── 52_ problema.curso 
+│   │   └── 54_ 'estadisticas_pr' problema.slug 
+│   ├── problema-header-simple
+│   │   ├── 10_ problema.titulo 
+│   │   ├── 18_ problema.dificultad 
+│   │   ├── 23_'dashboard/componentes/tags.html' with tags=problema.tags.all 
+│   │   └── 26_ problema.curso 
+│   ├── problema-inline
+│   │   └── 41_ problema.descripcion|linebreaks|truncatewords:50 
+│   ├── problema-retos
+│   └── tag-analisis-seccion
+│       └── 13_ problemas 
+└── tareas
+    ├── tarea-header
+    │   ├── 13_ tarea.descripcion 
+    │   ├── 15_ tarea.fecha_formateada 
+    │   └── 15_ tarea.fecha_limite|naturaltime 
+    ├── tarea-inline
+    │   ├── 12_ 'tarea' tarea.id 
+    │   ├── 14_ tarea.descripcion 
+    │   ├── 15_ tarea.vencida 
+    │   ├── 23_ tarea.fecha_formateada 
+    │   └── 24_ tarea.fecha_limite|naturaltime 
+    ├── tarea-seccion-inline
+    │   ├── 18_ tarea.numero 
+    │   ├── 22_ tarea.fecha_formateada 
+    │   ├── 23_  tarea.vencida 
+    │   ├── 25_ tarea.fecha_limite|naturaltime 
+    │   └── 29_ tarea.fecha_limite|naturaltime 
+    └── tarea-seccion-inline-corta
+        ├── 12_ tarea.seccion.numero 
+        ├── 15_ 'analisis_tarea' tarea.id 
+        ├── 18_ tarea.descripcion 
+        ├── 21_  tarea.vencida 
+        ├── 27_ tarea.fecha_formateada 
+        └── 28_ tarea.fecha_limite|naturaltime 
+calificador/dashboard/models
+├── comentarios
+│   ├── pregunta-inline
+│   │   ├── 34_ for comentario in pregunta.consultar_comentarios 
+│   │   └── 63_'dashboard/componentes/nuevo_comentario.html' with pregunta=pregunta formulario=pregunta.get_respuesta_form tipo="respuesta"
+│   └── problema-preguntas
+│       ├── 19_'dashboard/componentes/nuevo_comentario.html' with pregunta=pregunta formulario=form_pregunta tipo="pregunta" 
+│       └── 23_ for pregunta in problema.consultar_preguntas 
+├── envios
+│   ├── 10_'dashboard/bloques/envio-inline.html' with envio=envio problema=problema mostrar_problema=mostrar_problema 
+│   ├── 9_ for envio in envios 
+│   ├── envio-card
+│   │   ├── 15_ envio.problema.titulo 
+│   │   ├── 18_ envio.timestamp|naturaltime 
+│   │   ├── 22_ envio.avance == 100
+│   │   ├── 23_ envio.problema.dificultad 
+│   │   ├── 23_envio.resultado_estudiante.puntos
+│   │   ├── 25_'dashboard/componentes/avance_envio.html' with envio=envio 
+│   │   ├── 30_ 'problema' envio.problema.slug 
+│   │   ├── 36_ 'envio' envio.slug 
+│   │   └── 42_ 'nuevo_envio' envio.problema.slug 
+│   ├── envio-card-resumida
+│   │   ├── 15_ envio.numero 
+│   │   ├── 19_ 'envio' envio.slug 
+│   │   ├── 28_ envio.timestamp|naturaltime 
+│   │   ├── 33_ envio.avance == 100
+│   │   ├── 34_ envio.problema.dificultad 
+│   │   ├── 34_envio.resultado_estudiante.puntos
+│   │   └── 38_'dashboard/componentes/avance_envio.html' with envio=envio 
+│   ├── envio-header
+│   │   ├── 13_ envio.problema.es_reto 
+│   │   ├── 18_ envio.problema.titulo 
+│   │   ├── 19_ envio.numero 
+│   │   ├── 30_ envio.problema.dificultad 
+│   │   ├── 30_ envio.resultado_estudiante.puntos 
+│   │   ├── 38_ envio.problema.dificultad 
+│   │   ├── 41_ envio.problema.es_reto 
+│   │   ├── 47_ envio.problema.nombre_nivel_reto 
+│   │   ├── 54_ envio.fecha_formateada 
+│   │   └── 54_ envio.timestamp|naturaltime 
+│   ├── envio-inline
+│   │   ├── 17_ 'problema' envio.problema.slug 
+│   │   ├── 17_ envio.problema.titulo 
+│   │   ├── 20_ 'envio' envio.slug 
+│   │   ├── 20_ envio.numero 
+│   │   ├── 21_'dashboard/componentes/avance_envio.html' with envio=envio 
+│   │   ├── 23_ envio.timestamp|naturaltime 
+│   │   └── 25_'dashboard/componentes/nuevo_envio_boton.html' with problema=envio.problema 
+│   └── problema-tarea
+│       ├── 13_'dashboard/componentes/tags.html' with tags=problema.tags.all 
+│       └── 17_'dashboard/componentes/avance_envio.html' with envio=resultado_problema.ultimo_envio 
+├── problemas
+│   ├── especificacion_funcion
+│   │   ├── 13_ problema.funcion 
+│   │   ├── 24_ for parametro in problema.consultar_argumentos 
+│   │   ├── 38_ problema.retorno_tipo 
+│   │   └── 39_ problema.retorno_descripcion 
+│   ├── instrucciones
+│   │   └── 17_ include 'dashboard/bloques/especificacion_funcion.html' with problema=problema
+│   ├── pregunta-analisis-estudiante
+│   │   ├── 10_ 'problema' pregunta.problema.slug 
+│   │   ├── 10_ pregunta.problema.titulo 
+│   │   └── 11_ 'problema' pregunta.problema.slug 
+│   ├── problema-analisis-estudiante
+│   │   ├── 10_ problema.dificultad 
+│   │   ├── 13_ 'problema' problema.slug 
+│   │   ├── 13_ problema.titulo 
+│   │   ├── 14_ problema.es_reto 
+│   │   ├── 15_ problema.nombre_nivel_reto 
+│   │   └── 20_ 'analisis estudiante problema' resultado.estudiante.id resultado.problema.slug 
+│   ├── problema-analisis-seccion
+│   │   ├── 12_ 'problema' problema.slug 
+│   │   ├── 15_ problema.es_reto 
+│   │   ├── 17_ problema.nombre_nivel_reto 
+│   │   ├── 19_ problema.dificultad 
+│   │   └── 21_ 'analisis seccion problema' seccion.id problema.slug 
+│   ├── problema-busqueda
+│   │   ├── 15_ 'problema' problema.slug 
+│   │   ├── 15_ problema.titulo 
+│   │   ├── 20_ problema.publico 
+│   │   ├── 29_ problema.dificultad 
+│   │   ├── 33_ problema.dificultad 
+│   │   ├── 35_ problema.es_reto 
+│   │   ├── 37_ problema.nombre_nivel_reto 
+│   │   ├── 43_ 'administrar' problema.slug 
+│   │   └── 49_'dashboard/componentes/tags.html' with tags=problema.tags.all 
+│   ├── problema-card
+│   │   ├── 15_ problema.dificultad 
+│   │   ├── 19_ 'problema' problema.slug 
+│   │   ├── 19_ problema.titulo 
+│   │   ├── 22_ problema.publico 
+│   │   ├── 32_ problema.es_reto 
+│   │   ├── 34_ problema.nombre_nivel_reto 
+│   │   ├── 36_ problema.dificultad 
+│   │   └── 38_'dashboard/componentes/tags.html' with tags=problema.tags.all 
+│   ├── problema-descripcion
+│   │   └── 11_ problema.descripcion 
+│   ├── problema-header
+│   │   ├── 12_ problema.titulo 
+│   │   ├── 23_ problema.dificultad 
+│   │   ├── 23_ resultado_problema.puntos 
+│   │   ├── 32_ problema.dificultad 
+│   │   ├── 41_ problema.nombre_nivel_reto 
+│   │   ├── 52_ problema.curso 
+│   │   └── 54_ 'estadisticas_pr' problema.slug 
+│   ├── problema-header-simple
+│   │   ├── 10_ problema.titulo 
+│   │   ├── 18_ problema.dificultad 
+│   │   ├── 23_'dashboard/componentes/tags.html' with tags=problema.tags.all 
+│   │   └── 26_ problema.curso 
+│   ├── problema-inline
+│   │   └── 41_ problema.descripcion|linebreaks|truncatewords:50 
+│   ├── problema-retos
+│   └── tag-analisis-seccion
+│       └── 13_ problemas 
+└── tareas
+    ├── tarea-header
+    │   ├── 13_ tarea.descripcion 
+    │   ├── 15_ tarea.fecha_formateada 
+    │   └── 15_ tarea.fecha_limite|naturaltime 
+    ├── tarea-inline
+    │   ├── 12_ 'tarea' tarea.id 
+    │   ├── 14_ tarea.descripcion 
+    │   ├── 15_ tarea.vencida 
+    │   ├── 23_ tarea.fecha_formateada 
+    │   └── 24_ tarea.fecha_limite|naturaltime 
+    ├── tarea-seccion-inline
+    │   ├── 18_ tarea.numero 
+    │   ├── 22_ tarea.fecha_formateada 
+    │   ├── 23_  tarea.vencida 
+    │   ├── 25_ tarea.fecha_limite|naturaltime 
+    │   └── 29_ tarea.fecha_limite|naturaltime 
+    └── tarea-seccion-inline-corta
+        ├── 12_ tarea.seccion.numero 
+        ├── 15_ 'analisis_tarea' tarea.id 
+        ├── 18_ tarea.descripcion 
+        ├── 21_  tarea.vencida 
+        ├── 27_ tarea.fecha_formateada 
+        └── 28_ tarea.fecha_limite|naturaltime 
+calificador/dashboard/models
+├── comentarios
+│   ├── pregunta-inline
+│   │   ├── 34_ for comentario in pregunta.consultar_comentarios 
+│   │   └── 63_'dashboard/componentes/nuevo_comentario.html' with pregunta=pregunta formulario=pregunta.get_respuesta_form tipo="respuesta"
+│   └── problema-preguntas
+│       ├── 19_'dashboard/componentes/nuevo_comentario.html' with pregunta=pregunta formulario=form_pregunta tipo="pregunta" 
+│       └── 23_ for pregunta in problema.consultar_preguntas 
+├── envios
+│   ├── 10_'dashboard/bloques/envio-inline.html' with envio=envio problema=problema mostrar_problema=mostrar_problema 
+│   ├── 9_ for envio in envios 
+│   ├── envio-card
+│   │   ├── 15_ envio.problema.titulo 
+│   │   ├── 18_ envio.timestamp|naturaltime 
+│   │   ├── 22_ envio.avance == 100
+│   │   ├── 23_ envio.problema.dificultad 
+│   │   ├── 23_envio.resultado_estudiante.puntos
+│   │   ├── 25_'dashboard/componentes/avance_envio.html' with envio=envio 
+│   │   ├── 30_ 'problema' envio.problema.slug 
+│   │   ├── 36_ 'envio' envio.slug 
+│   │   └── 42_ 'nuevo_envio' envio.problema.slug 
+│   ├── envio-card-resumida
+│   │   ├── 15_ envio.numero 
+│   │   ├── 19_ 'envio' envio.slug 
+│   │   ├── 28_ envio.timestamp|naturaltime 
+│   │   ├── 33_ envio.avance == 100
+│   │   ├── 34_ envio.problema.dificultad 
+│   │   ├── 34_envio.resultado_estudiante.puntos
+│   │   └── 38_'dashboard/componentes/avance_envio.html' with envio=envio 
+│   ├── envio-header
+│   │   ├── 13_ envio.problema.es_reto 
+│   │   ├── 18_ envio.problema.titulo 
+│   │   ├── 19_ envio.numero 
+│   │   ├── 30_ envio.problema.dificultad 
+│   │   ├── 30_ envio.resultado_estudiante.puntos 
+│   │   ├── 38_ envio.problema.dificultad 
+│   │   ├── 41_ envio.problema.es_reto 
+│   │   ├── 47_ envio.problema.nombre_nivel_reto 
+│   │   ├── 54_ envio.fecha_formateada 
+│   │   └── 54_ envio.timestamp|naturaltime 
+│   ├── envio-inline
+│   │   ├── 17_ 'problema' envio.problema.slug 
+│   │   ├── 17_ envio.problema.titulo 
+│   │   ├── 20_ 'envio' envio.slug 
+│   │   ├── 20_ envio.numero 
+│   │   ├── 21_'dashboard/componentes/avance_envio.html' with envio=envio 
+│   │   ├── 23_ envio.timestamp|naturaltime 
+│   │   └── 25_'dashboard/componentes/nuevo_envio_boton.html' with problema=envio.problema 
+│   └── problema-tarea
+│       ├── 13_'dashboard/componentes/tags.html' with tags=problema.tags.all 
+│       └── 17_'dashboard/componentes/avance_envio.html' with envio=resultado_problema.ultimo_envio 
+├── problemas
+│   ├── especificacion_funcion
+│   │   ├── 13_ problema.funcion 
+│   │   ├── 24_ for parametro in problema.consultar_argumentos 
+│   │   ├── 38_ problema.retorno_tipo 
+│   │   └── 39_ problema.retorno_descripcion 
+│   ├── instrucciones
+│   │   └── 17_ include 'dashboard/bloques/especificacion_funcion.html' with problema=problema
+│   ├── pregunta-analisis-estudiante
+│   │   ├── 10_ 'problema' pregunta.problema.slug 
+│   │   ├── 10_ pregunta.problema.titulo 
+│   │   └── 11_ 'problema' pregunta.problema.slug 
+│   ├── problema-analisis-estudiante
+│   │   ├── 10_ problema.dificultad 
+│   │   ├── 13_ 'problema' problema.slug 
+│   │   ├── 13_ problema.titulo 
+│   │   ├── 14_ problema.es_reto 
+│   │   ├── 15_ problema.nombre_nivel_reto 
+│   │   └── 20_ 'analisis estudiante problema' resultado.estudiante.id resultado.problema.slug 
+│   ├── problema-analisis-seccion
+│   │   ├── 12_ 'problema' problema.slug 
+│   │   ├── 15_ problema.es_reto 
+│   │   ├── 17_ problema.nombre_nivel_reto 
+│   │   ├── 19_ problema.dificultad 
+│   │   └── 21_ 'analisis seccion problema' seccion.id problema.slug 
+│   ├── problema-busqueda
+│   │   ├── 15_ 'problema' problema.slug 
+│   │   ├── 15_ problema.titulo 
+│   │   ├── 20_ problema.publico 
+│   │   ├── 29_ problema.dificultad 
+│   │   ├── 33_ problema.dificultad 
+│   │   ├── 35_ problema.es_reto 
+│   │   ├── 37_ problema.nombre_nivel_reto 
+│   │   ├── 43_ 'administrar' problema.slug 
+│   │   └── 49_'dashboard/componentes/tags.html' with tags=problema.tags.all 
+│   ├── problema-card
+│   │   ├── 15_ problema.dificultad 
+│   │   ├── 19_ 'problema' problema.slug 
+│   │   ├── 19_ problema.titulo 
+│   │   ├── 22_ problema.publico 
+│   │   ├── 32_ problema.es_reto 
+│   │   ├── 34_ problema.nombre_nivel_reto 
+│   │   ├── 36_ problema.dificultad 
+│   │   └── 38_'dashboard/componentes/tags.html' with tags=problema.tags.all 
+│   ├── problema-descripcion
+│   │   └── 11_ problema.descripcion 
+│   ├── problema-header
+│   │   ├── 12_ problema.titulo 
+│   │   ├── 23_ problema.dificultad 
+│   │   ├── 23_ resultado_problema.puntos 
+│   │   ├── 32_ problema.dificultad 
+│   │   ├── 41_ problema.nombre_nivel_reto 
+│   │   ├── 52_ problema.curso 
+│   │   └── 54_ 'estadisticas_pr' problema.slug 
+│   ├── problema-header-simple
+│   │   ├── 10_ problema.titulo 
+│   │   ├── 18_ problema.dificultad 
+│   │   ├── 23_'dashboard/componentes/tags.html' with tags=problema.tags.all 
+│   │   └── 26_ problema.curso 
+│   ├── problema-inline
+│   │   └── 41_ problema.descripcion|linebreaks|truncatewords:50 
+│   ├── problema-retos
+│   └── tag-analisis-seccion
+│       └── 13_ problemas 
+└── tareas
+    ├── tarea-header
+    │   ├── 13_ tarea.descripcion 
+    │   ├── 15_ tarea.fecha_formateada 
+    │   └── 15_ tarea.fecha_limite|naturaltime 
+    ├── tarea-inline
+    │   ├── 12_ 'tarea' tarea.id 
+    │   ├── 14_ tarea.descripcion 
+    │   ├── 15_ tarea.vencida 
+    │   ├── 23_ tarea.fecha_formateada 
+    │   └── 24_ tarea.fecha_limite|naturaltime 
+    ├── tarea-seccion-inline
+    │   ├── 18_ tarea.numero 
+    │   ├── 22_ tarea.fecha_formateada 
+    │   ├── 23_  tarea.vencida 
+    │   ├── 25_ tarea.fecha_limite|naturaltime 
+    │   └── 29_ tarea.fecha_limite|naturaltime 
+    └── tarea-seccion-inline-corta
+        ├── 12_ tarea.seccion.numero 
+        ├── 15_ 'analisis_tarea' tarea.id 
+        ├── 18_ tarea.descripcion 
+        ├── 21_  tarea.vencida 
+        ├── 27_ tarea.fecha_formateada 
+        └── 28_ tarea.fecha_limite|naturaltime 
+calificador/dashboard/models
+├── comentarios
+│   ├── pregunta-inline
+│   │   ├── 34_ for comentario in pregunta.consultar_comentarios 
+│   │   └── 63_'dashboard/componentes/nuevo_comentario.html' with pregunta=pregunta formulario=pregunta.get_respuesta_form tipo="respuesta"
+│   └── problema-preguntas
+│       ├── 19_'dashboard/componentes/nuevo_comentario.html' with pregunta=pregunta formulario=form_pregunta tipo="pregunta" 
+│       └── 23_ for pregunta in problema.consultar_preguntas 
+├── envios
+│   ├── 10_'dashboard/bloques/envio-inline.html' with envio=envio problema=problema mostrar_problema=mostrar_problema 
+│   ├── 9_ for envio in envios 
+│   ├── envio-card
+│   │   ├── 15_ envio.problema.titulo 
+│   │   ├── 18_ envio.timestamp|naturaltime 
+│   │   ├── 22_ envio.avance == 100
+│   │   ├── 23_ envio.problema.dificultad 
+│   │   ├── 23_envio.resultado_estudiante.puntos
+│   │   ├── 25_'dashboard/componentes/avance_envio.html' with envio=envio 
+│   │   ├── 30_ 'problema' envio.problema.slug 
+│   │   ├── 36_ 'envio' envio.slug 
+│   │   └── 42_ 'nuevo_envio' envio.problema.slug 
+│   ├── envio-card-resumida
+│   │   ├── 15_ envio.numero 
+│   │   ├── 19_ 'envio' envio.slug 
+│   │   ├── 28_ envio.timestamp|naturaltime 
+│   │   ├── 33_ envio.avance == 100
+│   │   ├── 34_ envio.problema.dificultad 
+│   │   ├── 34_envio.resultado_estudiante.puntos
+│   │   └── 38_'dashboard/componentes/avance_envio.html' with envio=envio 
+│   ├── envio-header
+│   │   ├── 13_ envio.problema.es_reto 
+│   │   ├── 18_ envio.problema.titulo 
+│   │   ├── 19_ envio.numero 
+│   │   ├── 30_ envio.problema.dificultad 
+│   │   ├── 30_ envio.resultado_estudiante.puntos 
+│   │   ├── 38_ envio.problema.dificultad 
+│   │   ├── 41_ envio.problema.es_reto 
+│   │   ├── 47_ envio.problema.nombre_nivel_reto 
+│   │   ├── 54_ envio.fecha_formateada 
+│   │   └── 54_ envio.timestamp|naturaltime 
+│   ├── envio-inline
+│   │   ├── 17_ 'problema' envio.problema.slug 
+│   │   ├── 17_ envio.problema.titulo 
+│   │   ├── 20_ 'envio' envio.slug 
+│   │   ├── 20_ envio.numero 
+│   │   ├── 21_'dashboard/componentes/avance_envio.html' with envio=envio 
+│   │   ├── 23_ envio.timestamp|naturaltime 
+│   │   └── 25_'dashboard/componentes/nuevo_envio_boton.html' with problema=envio.problema 
+│   └── problema-tarea
+│       ├── 13_'dashboard/componentes/tags.html' with tags=problema.tags.all 
+│       └── 17_'dashboard/componentes/avance_envio.html' with envio=resultado_problema.ultimo_envio 
+├── problemas
+│   ├── especificacion_funcion
+│   │   ├── 13_ problema.funcion 
+│   │   ├── 24_ for parametro in problema.consultar_argumentos 
+│   │   ├── 38_ problema.retorno_tipo 
+│   │   └── 39_ problema.retorno_descripcion 
+│   ├── instrucciones
+│   │   └── 17_ include 'dashboard/bloques/especificacion_funcion.html' with problema=problema
+│   ├── pregunta-analisis-estudiante
+│   │   ├── 10_ 'problema' pregunta.problema.slug 
+│   │   ├── 10_ pregunta.problema.titulo 
+│   │   └── 11_ 'problema' pregunta.problema.slug 
+│   ├── problema-analisis-estudiante
+│   │   ├── 10_ problema.dificultad 
+│   │   ├── 13_ 'problema' problema.slug 
+│   │   ├── 13_ problema.titulo 
+│   │   ├── 14_ problema.es_reto 
+│   │   ├── 15_ problema.nombre_nivel_reto 
+│   │   └── 20_ 'analisis estudiante problema' resultado.estudiante.id resultado.problema.slug 
+│   ├── problema-analisis-seccion
+│   │   ├── 12_ 'problema' problema.slug 
+│   │   ├── 15_ problema.es_reto 
+│   │   ├── 17_ problema.nombre_nivel_reto 
+│   │   ├── 19_ problema.dificultad 
+│   │   └── 21_ 'analisis seccion problema' seccion.id problema.slug 
+│   ├── problema-busqueda
+│   │   ├── 15_ 'problema' problema.slug 
+│   │   ├── 15_ problema.titulo 
+│   │   ├── 20_ problema.publico 
+│   │   ├── 29_ problema.dificultad 
+│   │   ├── 33_ problema.dificultad 
+│   │   ├── 35_ problema.es_reto 
+│   │   ├── 37_ problema.nombre_nivel_reto 
+│   │   ├── 43_ 'administrar' problema.slug 
+│   │   └── 49_'dashboard/componentes/tags.html' with tags=problema.tags.all 
+│   ├── problema-card
+│   │   ├── 15_ problema.dificultad 
+│   │   ├── 19_ 'problema' problema.slug 
+│   │   ├── 19_ problema.titulo 
+│   │   ├── 22_ problema.publico 
+│   │   ├── 32_ problema.es_reto 
+│   │   ├── 34_ problema.nombre_nivel_reto 
+│   │   ├── 36_ problema.dificultad 
+│   │   └── 38_'dashboard/componentes/tags.html' with tags=problema.tags.all 
+│   ├── problema-descripcion
+│   │   └── 11_ problema.descripcion 
+│   ├── problema-header
+│   │   ├── 12_ problema.titulo 
+│   │   ├── 23_ problema.dificultad 
+│   │   ├── 23_ resultado_problema.puntos 
+│   │   ├── 32_ problema.dificultad 
+│   │   ├── 41_ problema.nombre_nivel_reto 
+│   │   ├── 52_ problema.curso 
+│   │   └── 54_ 'estadisticas_pr' problema.slug 
+│   ├── problema-header-simple
+│   │   ├── 10_ problema.titulo 
+│   │   ├── 18_ problema.dificultad 
+│   │   ├── 23_'dashboard/componentes/tags.html' with tags=problema.tags.all 
+│   │   └── 26_ problema.curso 
+│   ├── problema-inline
+│   │   └── 41_ problema.descripcion|linebreaks|truncatewords:50 
+│   ├── problema-retos
+│   └── tag-analisis-seccion
+│       └── 13_ problemas 
+└── tareas
+    ├── tarea-header
+    │   ├── 13_ tarea.descripcion 
+    │   ├── 15_ tarea.fecha_formateada 
+    │   └── 15_ tarea.fecha_limite|naturaltime 
+    ├── tarea-inline
+    │   ├── 12_ 'tarea' tarea.id 
+    │   ├── 14_ tarea.descripcion 
+    │   ├── 15_ tarea.vencida 
+    │   ├── 23_ tarea.fecha_formateada 
+    │   └── 24_ tarea.fecha_limite|naturaltime 
+    ├── tarea-seccion-inline
+    │   ├── 18_ tarea.numero 
+    │   ├── 22_ tarea.fecha_formateada 
+    │   ├── 23_  tarea.vencida 
+    │   ├── 25_ tarea.fecha_limite|naturaltime 
+    │   └── 29_ tarea.fecha_limite|naturaltime 
+    └── tarea-seccion-inline-corta
+        ├── 12_ tarea.seccion.numero 
+        ├── 15_ 'analisis_tarea' tarea.id 
+        ├── 18_ tarea.descripcion 
+        ├── 21_  tarea.vencida 
+        ├── 27_ tarea.fecha_formateada 
+        └── 28_ tarea.fecha_limite|naturaltime 
+calificador/dashboard/models
+├── comentarios
+│   ├── pregunta-inline
+│   │   ├── 34_ for comentario in pregunta.consultar_comentarios 
+│   │   └── 63_'dashboard/componentes/nuevo_comentario.html' with pregunta=pregunta formulario=pregunta.get_respuesta_form tipo="respuesta"
+│   └── problema-preguntas
+│       ├── 19_'dashboard/componentes/nuevo_comentario.html' with pregunta=pregunta formulario=form_pregunta tipo="pregunta" 
+│       └── 23_ for pregunta in problema.consultar_preguntas 
+├── envios
+│   ├── 10_'dashboard/bloques/envio-inline.html' with envio=envio problema=problema mostrar_problema=mostrar_problema 
+│   ├── 9_ for envio in envios 
+│   ├── envio-card
+│   │   ├── 15_ envio.problema.titulo 
+│   │   ├── 18_ envio.timestamp|naturaltime 
+│   │   ├── 22_ envio.avance == 100
+│   │   ├── 23_ envio.problema.dificultad 
+│   │   ├── 23_envio.resultado_estudiante.puntos
+│   │   ├── 25_'dashboard/componentes/avance_envio.html' with envio=envio 
+│   │   ├── 30_ 'problema' envio.problema.slug 
+│   │   ├── 36_ 'envio' envio.slug 
+│   │   └── 42_ 'nuevo_envio' envio.problema.slug 
+│   ├── envio-card-resumida
+│   │   ├── 15_ envio.numero 
+│   │   ├── 19_ 'envio' envio.slug 
+│   │   ├── 28_ envio.timestamp|naturaltime 
+│   │   ├── 33_ envio.avance == 100
+│   │   ├── 34_ envio.problema.dificultad 
+│   │   ├── 34_envio.resultado_estudiante.puntos
+│   │   └── 38_'dashboard/componentes/avance_envio.html' with envio=envio 
+│   ├── envio-header
+│   │   ├── 13_ envio.problema.es_reto 
+│   │   ├── 18_ envio.problema.titulo 
+│   │   ├── 19_ envio.numero 
+│   │   ├── 30_ envio.problema.dificultad 
+│   │   ├── 30_ envio.resultado_estudiante.puntos 
+│   │   ├── 38_ envio.problema.dificultad 
+│   │   ├── 41_ envio.problema.es_reto 
+│   │   ├── 47_ envio.problema.nombre_nivel_reto 
+│   │   ├── 54_ envio.fecha_formateada 
+│   │   └── 54_ envio.timestamp|naturaltime 
+│   ├── envio-inline
+│   │   ├── 17_ 'problema' envio.problema.slug 
+│   │   ├── 17_ envio.problema.titulo 
+│   │   ├── 20_ 'envio' envio.slug 
+│   │   ├── 20_ envio.numero 
+│   │   ├── 21_'dashboard/componentes/avance_envio.html' with envio=envio 
+│   │   ├── 23_ envio.timestamp|naturaltime 
+│   │   └── 25_'dashboard/componentes/nuevo_envio_boton.html' with problema=envio.problema 
+│   └── problema-tarea
+│       ├── 13_'dashboard/componentes/tags.html' with tags=problema.tags.all 
+│       └── 17_'dashboard/componentes/avance_envio.html' with envio=resultado_problema.ultimo_envio 
+├── problemas
+│   ├── especificacion_funcion
+│   │   ├── 13_ problema.funcion 
+│   │   ├── 24_ for parametro in problema.consultar_argumentos 
+│   │   ├── 38_ problema.retorno_tipo 
+│   │   └── 39_ problema.retorno_descripcion 
+│   ├── instrucciones
+│   │   └── 17_ include 'dashboard/bloques/especificacion_funcion.html' with problema=problema
+│   ├── pregunta-analisis-estudiante
+│   │   ├── 10_ 'problema' pregunta.problema.slug 
+│   │   ├── 10_ pregunta.problema.titulo 
+│   │   └── 11_ 'problema' pregunta.problema.slug 
+│   ├── problema-analisis-estudiante
+│   │   ├── 10_ problema.dificultad 
+│   │   ├── 13_ 'problema' problema.slug 
+│   │   ├── 13_ problema.titulo 
+│   │   ├── 14_ problema.es_reto 
+│   │   ├── 15_ problema.nombre_nivel_reto 
+│   │   └── 20_ 'analisis estudiante problema' resultado.estudiante.id resultado.problema.slug 
+│   ├── problema-analisis-seccion
+│   │   ├── 12_ 'problema' problema.slug 
+│   │   ├── 15_ problema.es_reto 
+│   │   ├── 17_ problema.nombre_nivel_reto 
+│   │   ├── 19_ problema.dificultad 
+│   │   └── 21_ 'analisis seccion problema' seccion.id problema.slug 
+│   ├── problema-busqueda
+│   │   ├── 15_ 'problema' problema.slug 
+│   │   ├── 15_ problema.titulo 
+│   │   ├── 20_ problema.publico 
+│   │   ├── 29_ problema.dificultad 
+│   │   ├── 33_ problema.dificultad 
+│   │   ├── 35_ problema.es_reto 
+│   │   ├── 37_ problema.nombre_nivel_reto 
+│   │   ├── 43_ 'administrar' problema.slug 
+│   │   └── 49_'dashboard/componentes/tags.html' with tags=problema.tags.all 
+│   ├── problema-card
+│   │   ├── 15_ problema.dificultad 
+│   │   ├── 19_ 'problema' problema.slug 
+│   │   ├── 19_ problema.titulo 
+│   │   ├── 22_ problema.publico 
+│   │   ├── 32_ problema.es_reto 
+│   │   ├── 34_ problema.nombre_nivel_reto 
+│   │   ├── 36_ problema.dificultad 
+│   │   └── 38_'dashboard/componentes/tags.html' with tags=problema.tags.all 
+│   ├── problema-descripcion
+│   │   └── 11_ problema.descripcion 
+│   ├── problema-header
+│   │   ├── 12_ problema.titulo 
+│   │   ├── 23_ problema.dificultad 
+│   │   ├── 23_ resultado_problema.puntos 
+│   │   ├── 32_ problema.dificultad 
+│   │   ├── 41_ problema.nombre_nivel_reto 
+│   │   ├── 52_ problema.curso 
+│   │   └── 54_ 'estadisticas_pr' problema.slug 
+│   ├── problema-header-simple
+│   │   ├── 10_ problema.titulo 
+│   │   ├── 18_ problema.dificultad 
+│   │   ├── 23_'dashboard/componentes/tags.html' with tags=problema.tags.all 
+│   │   └── 26_ problema.curso 
+│   ├── problema-inline
+│   │   └── 41_ problema.descripcion|linebreaks|truncatewords:50 
+│   ├── problema-retos
+│   └── tag-analisis-seccion
+│       └── 13_ problemas 
+└── tareas
+    ├── tarea-header
+    │   ├── 13_ tarea.descripcion 
+    │   ├── 15_ tarea.fecha_formateada 
+    │   └── 15_ tarea.fecha_limite|naturaltime 
+    ├── tarea-inline
+    │   ├── 12_ 'tarea' tarea.id 
+    │   ├── 14_ tarea.descripcion 
+    │   ├── 15_ tarea.vencida 
+    │   ├── 23_ tarea.fecha_formateada 
+    │   └── 24_ tarea.fecha_limite|naturaltime 
+    ├── tarea-seccion-inline
+    │   ├── 18_ tarea.numero 
+    │   ├── 22_ tarea.fecha_formateada 
+    │   ├── 23_  tarea.vencida 
+    │   ├── 25_ tarea.fecha_limite|naturaltime 
+    │   └── 29_ tarea.fecha_limite|naturaltime 
+    └── tarea-seccion-inline-corta
+        ├── 12_ tarea.seccion.numero 
+        ├── 15_ 'analisis_tarea' tarea.id 
+        ├── 18_ tarea.descripcion 
+        ├── 21_  tarea.vencida 
+        ├── 27_ tarea.fecha_formateada 
+        └── 28_ tarea.fecha_limite|naturaltime 
+calificador/dashboard/models
+├── comentarios
+│   ├── pregunta-inline
+│   │   ├── 34_ for comentario in pregunta.consultar_comentarios 
+│   │   └── 63_'dashboard/componentes/nuevo_comentario.html' with pregunta=pregunta formulario=pregunta.get_respuesta_form tipo="respuesta"
+│   └── problema-preguntas
+│       ├── 19_'dashboard/componentes/nuevo_comentario.html' with pregunta=pregunta formulario=form_pregunta tipo="pregunta" 
+│       └── 23_ for pregunta in problema.consultar_preguntas 
+├── envios
+│   ├── 10_'dashboard/bloques/envio-inline.html' with envio=envio problema=problema mostrar_problema=mostrar_problema 
+│   ├── 9_ for envio in envios 
+│   ├── envio-card
+│   │   ├── 15_ envio.problema.titulo 
+│   │   ├── 18_ envio.timestamp|naturaltime 
+│   │   ├── 22_ envio.avance == 100
+│   │   ├── 23_ envio.problema.dificultad 
+│   │   ├── 23_envio.resultado_estudiante.puntos
+│   │   ├── 25_'dashboard/componentes/avance_envio.html' with envio=envio 
+│   │   ├── 30_ 'problema' envio.problema.slug 
+│   │   ├── 36_ 'envio' envio.slug 
+│   │   └── 42_ 'nuevo_envio' envio.problema.slug 
+│   ├── envio-card-resumida
+│   │   ├── 15_ envio.numero 
+│   │   ├── 19_ 'envio' envio.slug 
+│   │   ├── 28_ envio.timestamp|naturaltime 
+│   │   ├── 33_ envio.avance == 100
+│   │   ├── 34_ envio.problema.dificultad 
+│   │   ├── 34_envio.resultado_estudiante.puntos
+│   │   └── 38_'dashboard/componentes/avance_envio.html' with envio=envio 
+│   ├── envio-header
+│   │   ├── 13_ envio.problema.es_reto 
+│   │   ├── 18_ envio.problema.titulo 
+│   │   ├── 19_ envio.numero 
+│   │   ├── 30_ envio.problema.dificultad 
+│   │   ├── 30_ envio.resultado_estudiante.puntos 
+│   │   ├── 38_ envio.problema.dificultad 
+│   │   ├── 41_ envio.problema.es_reto 
+│   │   ├── 47_ envio.problema.nombre_nivel_reto 
+│   │   ├── 54_ envio.fecha_formateada 
+│   │   └── 54_ envio.timestamp|naturaltime 
+│   ├── envio-inline
+│   │   ├── 17_ 'problema' envio.problema.slug 
+│   │   ├── 17_ envio.problema.titulo 
+│   │   ├── 20_ 'envio' envio.slug 
+│   │   ├── 20_ envio.numero 
+│   │   ├── 21_'dashboard/componentes/avance_envio.html' with envio=envio 
+│   │   ├── 23_ envio.timestamp|naturaltime 
+│   │   └── 25_'dashboard/componentes/nuevo_envio_boton.html' with problema=envio.problema 
+│   └── problema-tarea
+│       ├── 13_'dashboard/componentes/tags.html' with tags=problema.tags.all 
+│       └── 17_'dashboard/componentes/avance_envio.html' with envio=resultado_problema.ultimo_envio 
+├── problemas
+│   ├── especificacion_funcion
+│   │   ├── 13_ problema.funcion 
+│   │   ├── 24_ for parametro in problema.consultar_argumentos 
+│   │   ├── 38_ problema.retorno_tipo 
+│   │   └── 39_ problema.retorno_descripcion 
+│   ├── instrucciones
+│   │   └── 17_ include 'dashboard/bloques/especificacion_funcion.html' with problema=problema
+│   ├── pregunta-analisis-estudiante
+│   │   ├── 10_ 'problema' pregunta.problema.slug 
+│   │   ├── 10_ pregunta.problema.titulo 
+│   │   └── 11_ 'problema' pregunta.problema.slug 
+│   ├── problema-analisis-estudiante
+│   │   ├── 10_ problema.dificultad 
+│   │   ├── 13_ 'problema' problema.slug 
+│   │   ├── 13_ problema.titulo 
+│   │   ├── 14_ problema.es_reto 
+│   │   ├── 15_ problema.nombre_nivel_reto 
+│   │   └── 20_ 'analisis estudiante problema' resultado.estudiante.id resultado.problema.slug 
+│   ├── problema-analisis-seccion
+│   │   ├── 12_ 'problema' problema.slug 
+│   │   ├── 15_ problema.es_reto 
+│   │   ├── 17_ problema.nombre_nivel_reto 
+│   │   ├── 19_ problema.dificultad 
+│   │   └── 21_ 'analisis seccion problema' seccion.id problema.slug 
+│   ├── problema-busqueda
+│   │   ├── 15_ 'problema' problema.slug 
+│   │   ├── 15_ problema.titulo 
+│   │   ├── 20_ problema.publico 
+│   │   ├── 29_ problema.dificultad 
+│   │   ├── 33_ problema.dificultad 
+│   │   ├── 35_ problema.es_reto 
+│   │   ├── 37_ problema.nombre_nivel_reto 
+│   │   ├── 43_ 'administrar' problema.slug 
+│   │   └── 49_'dashboard/componentes/tags.html' with tags=problema.tags.all 
+│   ├── problema-card
+│   │   ├── 15_ problema.dificultad 
+│   │   ├── 19_ 'problema' problema.slug 
+│   │   ├── 19_ problema.titulo 
+│   │   ├── 22_ problema.publico 
+│   │   ├── 32_ problema.es_reto 
+│   │   ├── 34_ problema.nombre_nivel_reto 
+│   │   ├── 36_ problema.dificultad 
+│   │   └── 38_'dashboard/componentes/tags.html' with tags=problema.tags.all 
+│   ├── problema-descripcion
+│   │   └── 11_ problema.descripcion 
+│   ├── problema-header
+│   │   ├── 12_ problema.titulo 
+│   │   ├── 23_ problema.dificultad 
+│   │   ├── 23_ resultado_problema.puntos 
+│   │   ├── 32_ problema.dificultad 
+│   │   ├── 41_ problema.nombre_nivel_reto 
+│   │   ├── 52_ problema.curso 
+│   │   └── 54_ 'estadisticas_pr' problema.slug 
+│   ├── problema-header-simple
+│   │   ├── 10_ problema.titulo 
+│   │   ├── 18_ problema.dificultad 
+│   │   ├── 23_'dashboard/componentes/tags.html' with tags=problema.tags.all 
+│   │   └── 26_ problema.curso 
+│   ├── problema-inline
+│   │   └── 41_ problema.descripcion|linebreaks|truncatewords:50 
+│   ├── problema-retos
+│   └── tag-analisis-seccion
+│       └── 13_ problemas 
+└── tareas
+    ├── tarea-header
+    │   ├── 13_ tarea.descripcion 
+    │   ├── 15_ tarea.fecha_formateada 
+    │   └── 15_ tarea.fecha_limite|naturaltime 
+    ├── tarea-inline
+    │   ├── 12_ 'tarea' tarea.id 
+    │   ├── 14_ tarea.descripcion 
+    │   ├── 15_ tarea.vencida 
+    │   ├── 23_ tarea.fecha_formateada 
+    │   └── 24_ tarea.fecha_limite|naturaltime 
+    ├── tarea-seccion-inline
+    │   ├── 18_ tarea.numero 
+    │   ├── 22_ tarea.fecha_formateada 
+    │   ├── 23_  tarea.vencida 
+    │   ├── 25_ tarea.fecha_limite|naturaltime 
+    │   └── 29_ tarea.fecha_limite|naturaltime 
+    └── tarea-seccion-inline-corta
+        ├── 12_ tarea.seccion.numero 
+        ├── 15_ 'analisis_tarea' tarea.id 
+        ├── 18_ tarea.descripcion 
+        ├── 21_  tarea.vencida 
+        ├── 27_ tarea.fecha_formateada 
+        └── 28_ tarea.fecha_limite|naturaltime 

@@ -1,0 +1,114 @@
+calificador/dashboard/templates/dashboard
+├── /bloques/estudiantes_seccion.html
+│   └── line:7 - <img class="mini ui image" src="/image/{{ prof.avatar }}" />
+├── /bloques/pregunta-inline.html
+│   ├── line:30 - <img src="/image/{{ comentario.autor.avatar }}"  style="width:30px;height:30px;">
+│   ├── line:32 - <img src="/image/anon.png">
+│   ├── line:7 - <img src="/image/{{ pregunta.autor.avatar }}" style="width:30px;height:30px;">
+│   └── line:9 - <img src="/image/anon.png">
+├── /componentes/resumen_completo_estudiante.html
+│   ├── line:10 - <td><!--<img src="/image/{{ est.pulso_actividad }}" width="60" />--></td>
+│   ├── line:11 - <td><!--<img src="/image/{{ est.pulso_puntos }}"  width="60" />--></td>
+│   └── line:6 - <img class="logo" width="30" height="30" src="/image/{{ est.avatar }}" style="transform: translate(0,25%)"/>
+├── /componentes/resumen_estudiante.html
+│   ├── line:13 - <div class="two wide column"><!--<img src="/image/{{ est.pulso_actividad }}" width="60" />--></div>
+│   ├── line:14 - <div class="two wide column"><!--<img src="/image/{{ est.pulso_puntos }}"  width="60" />--></div>
+│   └── line:7 - <img class="logo" width="30" height="30" src="/image/{{ est.avatar }}" style="transform: translate(0,0)"/>
+├── /componentes/seccion.html
+│   └── line:5 - <img class="right floated mini ui image" src="/image/{{ prof.avatar }}" />
+├── /envios/envio.html
+│   └── line:17 - <img src="/image/{{ envio.estudiante.avatar }}" style="width:30px;height:30px;">
+├── /envios/envios.html
+│   └── line:58 - <img class="logo" src="/image/Seneca_singotto.png" width="250" style="display: block; margin: auto; width: 250px;"/>
+├── /perfil/analisis_estudiante.html
+│   ├── line:18 - <img src="/image/{{ estudiante.avatar }}"  style="width:290px;height:290px;">
+│   ├── line:62 - <img src="/image/{{ estudiante.pulso_actividad }}" width="200"/>
+│   └── line:77 - <img src="/image/{{ estudiante.pulso_puntos }}" width="200"/>
+├── /perfil/perfil.html
+│   └── line:15 - <img src="/image/{{ usuario.avatar }}"  style="width:290px;height:290px;">
+├── /secciones/seccion.html
+│   └── line:16 - <img src="/image/{{ prof.avatar }}" />
+├── /tareas/tareas.html
+│   └── line:51 - <img class="logo" src="/image/Seneca_singotto.png" width="250" style="display: block; margin: auto; width: 250px;"/>
+├── /tareas/tareas_profesor.html
+├── /work/autor-inline.html
+│   └── line:2 - <img src="/image/{{ autor.avatar }}" width="45" height="45" />
+└── login.html
+    ├── line:128 - <img class="logo" src="/image/Seneca_singotto.png" width="250" />
+    └── line:83 - <img class="logo" src="/image/logo_disc.png">
+calificador/dashboard/templates/dashboard
+├── /bloques/estudiantes_seccion.html
+│   └── line:7 - <img class="mini ui image" src="/image/{{ prof.avatar }}" />
+├── /bloques/pregunta-inline.html
+│   ├── line:30 - <img src="/image/{{ comentario.autor.avatar }}"  style="width:30px;height:30px;">
+│   ├── line:32 - <img src="/image/anon.png">
+│   ├── line:7 - <img src="/image/{{ pregunta.autor.avatar }}" style="width:30px;height:30px;">
+│   └── line:9 - <img src="/image/anon.png">
+├── /componentes/resumen_completo_estudiante.html
+│   ├── line:10 - <td><!--<img src="/image/{{ est.pulso_actividad }}" width="60" />--></td>
+│   ├── line:11 - <td><!--<img src="/image/{{ est.pulso_puntos }}"  width="60" />--></td>
+│   └── line:6 - <img class="logo" width="30" height="30" src="/image/{{ est.avatar }}" style="transform: translate(0,25%)"/>
+├── /componentes/resumen_estudiante.html
+│   ├── line:13 - <div class="two wide column"><!--<img src="/image/{{ est.pulso_actividad }}" width="60" />--></div>
+│   ├── line:14 - <div class="two wide column"><!--<img src="/image/{{ est.pulso_puntos }}"  width="60" />--></div>
+│   └── line:7 - <img class="logo" width="30" height="30" src="/image/{{ est.avatar }}" style="transform: translate(0,0)"/>
+├── /componentes/seccion.html
+│   └── line:5 - <img class="right floated mini ui image" src="/image/{{ prof.avatar }}" />
+├── /envios/envio.html
+│   └── line:17 - <img src="/image/{{ envio.estudiante.avatar }}" style="width:30px;height:30px;">
+├── /envios/envios.html
+│   └── line:58 - <img class="logo" src="/image/Seneca_singotto.png" width="250" style="display: block; margin: auto; width: 250px;"/>
+├── /perfil/analisis_estudiante.html
+│   ├── line:18 - <img src="/image/{{ estudiante.avatar }}"  style="width:290px;height:290px;">
+│   ├── line:62 - <img src="/image/{{ estudiante.pulso_actividad }}" width="200"/>
+│   └── line:77 - <img src="/image/{{ estudiante.pulso_puntos }}" width="200"/>
+├── /perfil/perfil.html
+│   └── line:15 - <img src="/image/{{ usuario.avatar }}"  style="width:290px;height:290px;">
+├── /secciones/seccion.html
+│   └── line:16 - <img src="/image/{{ prof.avatar }}" />
+├── /tareas/tareas.html
+│   └── line:51 - <img class="logo" src="/image/Seneca_singotto.png" width="250" style="display: block; margin: auto; width: 250px;"/>
+├── /tareas/tareas_profesor.html
+├── /work/autor-inline.html
+│   └── line:2 - <img src="/image/{{ autor.avatar }}" width="45" height="45" />
+└── login.html
+    ├── line:128 - <img class="logo" src="/image/Seneca_singotto.png" width="250" />
+    └── line:83 - <img class="logo" src="/image/logo_disc.png">
+calificador/dashboard/templates/dashboard
+├── /bloques/estudiantes_seccion.html
+│   └── line:15 - <img class="mini ui image" src="/image/{{ prof.avatar }}" />
+├── /bloques/pregunta-inline.html
+│   ├── line:15 - <img src="/image/{{ pregunta.autor.avatar }}" style="width:30px;height:30px;">
+│   ├── line:17 - <img src="/image/anon.png">
+│   ├── line:38 - <img src="/image/{{ comentario.autor.avatar }}"  style="width:30px;height:30px;">
+│   └── line:40 - <img src="/image/anon.png">
+├── /componentes/resumen_completo_estudiante.html
+│   ├── line:14 - <img class="logo" width="30" height="30" src="/image/{{ est.avatar }}" style="transform: translate(0,25%)"/>
+│   ├── line:18 - <td><!--<img src="/image/{{ est.pulso_actividad }}" width="60" />--></td>
+│   └── line:19 - <td><!--<img src="/image/{{ est.pulso_puntos }}"  width="60" />--></td>
+├── /componentes/resumen_estudiante.html
+│   ├── line:15 - <img class="logo" width="30" height="30" src="/image/{{ est.avatar }}" style="transform: translate(0,0)"/>
+│   ├── line:21 - <div class="two wide column"><!--<img src="/image/{{ est.pulso_actividad }}" width="60" />--></div>
+│   └── line:22 - <div class="two wide column"><!--<img src="/image/{{ est.pulso_puntos }}"  width="60" />--></div>
+├── /componentes/seccion.html
+│   └── line:13 - <img class="right floated mini ui image" src="/image/{{ prof.avatar }}" />
+├── /envios/envio.html
+│   └── line:25 - <img src="/image/{{ envio.estudiante.avatar }}" style="width:30px;height:30px;">
+├── /envios/envios.html
+│   └── line:66 - <img class="logo" src="/image/Seneca_singotto.png" width="250" style="display: block; margin: auto; width: 250px;"/>
+├── /perfil/analisis_estudiante.html
+│   ├── line:26 - <img src="/image/{{ estudiante.avatar }}"  style="width:290px;height:290px;">
+│   ├── line:70 - <img src="/image/{{ estudiante.pulso_actividad }}" width="200"/>
+│   └── line:85 - <img src="/image/{{ estudiante.pulso_puntos }}" width="200"/>
+├── /perfil/perfil.html
+│   └── line:23 - <img src="/image/{{ usuario.avatar }}"  style="width:290px;height:290px;">
+├── /secciones/seccion.html
+│   └── line:24 - <img src="/image/{{ prof.avatar }}" />
+├── /tareas/tareas.html
+│   └── line:59 - <img class="logo" src="/image/Seneca_singotto.png" width="250" style="display: block; margin: auto; width: 250px;"/>
+├── /tareas/tareas_profesor.html
+├── /work/autor-inline.html
+│   └── line:10 - <img src="/image/{{ autor.avatar }}" width="45" height="45" />
+└── login.html
+    ├── line:136 - <img class="logo" src="/image/Seneca_singotto.png" width="250" />
+    └── line:91 - <img class="logo" src="/image/logo_disc.png">
